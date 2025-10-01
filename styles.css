@@ -8,18 +8,24 @@ html, body { height: 100%; }
 body {
   margin: 0;
   font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
-  /* Full-screen background image (Catober alternative) */
-  background-image: url('defipullen_a_cat_is_jumping_in_the_air_with_its_paws_outstret_4098f557-cb4d-4981-9585-cdcafcb68936_3.png');
+  overflow-y: auto;
+}
+
+/* Full-screen hero background uses the exact requested image */
+.hero {
+  min-height: 100vh;
+  /* Ensure visibility even if image fails to load */
+  background-color: #FFC72A; /* vibrant Catober yellow */
+  background-image: url('assets/defipullen_a_cat_is_jumping_in_the_air_with_its_paws_outstret_6b34125d-253e-4cd7-8385-1be1e4cad119_3.png');
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
-  /* Prevent scrollbars */
-  min-height: 100vh;
-  overflow: hidden;
+  width: 100%;
+  display: block;
 }
 
-/* No content; page container unused */
-.page { display: none; }
+/* Optional page container; not used currently */
+.page { display: block; }
 
 /* Grid/carousel styles retained below for potential future reuse */
 
@@ -98,4 +104,31 @@ body {
 
 @media (max-width: 460px) {
   .grid { grid-template-columns: 1fr; }
+}
+
+/* Gallery layout */
+.gallery {
+  display: block;
+  padding: 24px;
+  background: #f7f7f7;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+.card {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+}
+
+.card img {
+  display: block;
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
 }
