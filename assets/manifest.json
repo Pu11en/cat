@@ -1,0 +1,14 @@
+{
+  "card1": [
+    "cat1.jpg",
+    "cat2.jpg",
+    "cat3.jpg"
+  ],
+  "card2": [
+    "cat4.jpg",
+    "cat5.jpg"
+  ],
+  "card3": [
+    "cat6.jpg"
+  ]
+}
