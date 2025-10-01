@@ -28,8 +28,8 @@
     ]).map((src, i) => {
       const img = document.createElement('img');
       img.alt = `Slide ${i + 1}`;
-      // If manifest entry is relative, prepend assets/
-      img.src = src.startsWith('http') ? src : `assets/${src}`;
+      // Use path as-is; supports root files (e.g., "file.png") and subfolders (e.g., "assets/file.png").
+      img.src = src;
       img.onerror = () => {
         img.src = 'https://placehold.co/800x800/666/FFFFFF?text=Missing+Image';
       };
