@@ -8,18 +8,20 @@ html, body { height: 100%; }
 body {
   margin: 0;
   font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
-  display: grid;
-  place-items: center;
-  background: #111; /* dark backdrop for simple cards */
+  /* Full-screen background image (Catober alternative) */
+  background-image: url('defipullen_a_cat_is_jumping_in_the_air_with_its_paws_outstret_4098f557-cb4d-4981-9585-cdcafcb68936_3.png');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* Prevent scrollbars */
+  min-height: 100vh;
+  overflow: hidden;
 }
 
-.page { width: min(1200px, 95vw); }
+/* No content; page container unused */
+.page { display: none; }
 
-.grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 16px;
-}
+/* Grid/carousel styles retained below for potential future reuse */
 
 .grid img {
   width: 100%;
